@@ -1,0 +1,56 @@
+User,Movie,Rating
+Alice,Star Wars,5.0
+Frank,The Godfather,4.0
+Bob,Titanic,5.0
+Carol,The Matrix,3.0
+Dave,Inception,2.0
+Emily,Pulp Fiction,4.0
+Quincy,Star Wars,5.0
+Bob,Star Wars,2.0
+Frank,Forrest Gump,3.0
+Alice,The Matrix,4.0
+Paul,Titanic,4.0
+Carol,Inception,5.0
+Dave,Titanic,4.0
+Emily,The Godfather,5.0
+Alice,Inception,3.0
+Paul,The Godfather,5.0
+Carol,Pulp Fiction,4.0
+Ivy,Star Wars,5.0
+Emily,Forrest Gump,3.0
+Quincy,The Matrix,4.0
+Ivy,The Matrix,4.0
+Paul,Inception,1.0
+Bob,The Godfather,4.0
+Frank,Star Wars,5.0
+Ivy,Inception,3.0
+Dave,Forrest Gump,5.0
+Quincy,Inception,3.0
+Karen,The Matrix,3.0
+Leo,Titanic,4.0
+Mia,The Godfather,5.0
+Nina,Star Wars,5.0
+Oscar,The Matrix,4.0
+Sarah,Star Wars,5.0
+Tom,Pulp Fiction,
+Karen,Inception,5.0
+Leo,Inception,2.0
+Mia,Pulp Fiction,4.0
+Nina,The Godfather,4.0
+Oscar,Pulp Fiction,2.0
+Sarah,Inception,4.0
+Wendy,Pulp Fiction,4.0
+Zane,Pulp Fiction,3.5
+Uma,Titanic,5.0
+Victor,Matrix,
+Wendy,The Matrix,3.5
+Xander,Forrest Gump,5.0
+Yara,Inception,5.0
+Zane,Forrest Gump,3.5
+Uma,Star Wars,2.0
+Karen,Pulp Fiction,4.0
+Leo,Forrest Gump,5.0
+Mia,Forrest Gump,3.0
+Nina,Forrest Gump,3.0
+Oscar,Forrest Gump,5.0
+Zane,Star Wars,4.0
