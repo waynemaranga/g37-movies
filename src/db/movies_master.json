@@ -1,0 +1,138 @@
+{
+  "Star Wars": {
+    "Similar Movies": [
+      "The Empire Strikes Back",
+      "Return of the Jedi",
+      "The Force Awakens",
+      "Rogue One",
+      "Solo",
+      "The Last Jedi",
+      "A New Hope",
+      "Attack of the Clones",
+      "Revenge of the Sith",
+      "The Rise of Skywalker"
+    ],
+    "Genre": "Sci-Fi",
+    "Years": [1977],
+    "Plot Summary": "A long time ago, in a galaxy far, far away..."
+  },
+  "The Godfather": {
+    "Similar Movies": [
+      "The Godfather: Part II",
+      "Goodfellas",
+      "Scarface",
+      "Casino",
+      "The Departed",
+      "Once Upon a Time in America",
+      "A Bronx Tale",
+      "Donnie Brasco",
+      "The Irishman",
+      "Heat"
+    ],
+    "Genre": "Crime",
+    "Years": [1972],
+    "Plot Summary": "The aging patriarch of an organized crime dynasty transfers control of his..."
+  },
+  "Titanic": {
+    "Similar Movies": [
+      "Avatar",
+      "The Great Gatsby",
+      "Pearl Harbor",
+      "Atonement",
+      "The Notebook",
+      "Sense and Sensibility",
+      "Pride and Prejudice",
+      "Moulin Rouge!",
+      "Gone with the Wind",
+      "Doctor Zhivago"
+    ],
+    "Genre": "Drama",
+    "Years": [1997],
+    "Plot Summary": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard..."
+  },
+  "The Matrix": {
+    "Similar Movies": [
+      "The Matrix Reloaded",
+      "The Matrix Revolutions",
+      "Inception",
+      "Blade Runner",
+      "Ghost in the Shell",
+      "Equilibrium",
+      "Total Recall",
+      "Tron: Legacy",
+      "Aeon Flux",
+      "The Thirteenth Floor"
+    ],
+    "Genre": "Sci-Fi",
+    "Years": [1999],
+    "Plot Summary": "A computer hacker learns from mysterious rebels about the true nature of his reality..."
+  },
+  "Inception": {
+    "Similar Movies": [
+      "Interstellar",
+      "Shutter Island",
+      "The Prestige",
+      "Memento",
+      "Eternal Sunshine of the Spotless Mind",
+      "Donnie Darko",
+      "Primer",
+      "Source Code",
+      "The Adjustment Bureau",
+      "Predestination"
+    ],
+    "Genre": "Sci-Fi",
+    "Years": [2010],
+    "Plot Summary": "A thief who enters the dreams of others to steal their secrets faces a new challenge..."
+  },
+  "Pulp Fiction": {
+    "Similar Movies": [
+      "Reservoir Dogs",
+      "Kill Bill: Vol. 1",
+      "Fight Club",
+      "American Psycho",
+      "The Boondock Saints",
+      "Lock, Stock, and Two Smoking Barrels",
+      "Snatch",
+      "Trainspotting",
+      "Memento",
+      "Se7en"
+    ],
+    "Genre": "Crime",
+    "Years": [1994],
+    "Plot Summary": "Several interconnected stories of criminals in Los Angeles unfold in a nonlinear fashion..."
+  },
+  "Forrest Gump": {
+    "Similar Movies": [
+      "The Shawshank Redemption",
+      "Life Is Beautiful",
+      "The Green Mile",
+      "A Beautiful Mind",
+      "Rain Man",
+      "Good Will Hunting",
+      "Dead Poets Society",
+      "Big Fish",
+      "The Pursuit of Happyness",
+      "The Curious Case of Benjamin Button"
+    ],
+    "Genre": "Drama",
+    "Years": [1994],
+    "Plot Summary": "A man with a low IQ witnesses and unwittingly influences several defining historical events..."
+  },
+  "Matrix": {
+    "Similar Movies": [
+      "The Matrix Reloaded",
+      "The Matrix Revolutions",
+      "Inception",
+      "Blade Runner",
+      "Ghost in the Shell",
+      "Equilibrium",
+      "Total Recall",
+      "Tron: Legacy",
+      "Aeon Flux",
+      "The Thirteenth Floor"
+    ],
+    "Genre": "Sci-Fi",
+    "Years": [1999],
+    "Plot Summary": "A computer hacker learns from mysterious rebels about the true nature of his reality..."
+  }
+}

@@ -1,0 +1,59 @@
+User,Movie,Rating
+Alice,Star Wars,5
+Frank,The Godfather,4
+Bob,Titanic,5
+Carol,The Matrix,3
+Dave,Inception,2
+Emily,Pulp Fiction,4
+Quincy,Star Wars,5
+Bob,Star Wars,2
+Frank,Forrest Gump,3
+Alice,The Matrix,4
+Paul,Titanic,4
+Carol,Inception,5
+Dave,Titanic,4
+Emily,The Godfather,5
+Alice,Inception,3
+Paul,The Godfather,5
+Carol,Pulp Fiction,4
+Ivy,Star Wars,5
+Emily,Forrest Gump,3
+Quincy,The Matrix,4
+Ivy,The Matrix,4
+Paul,Inception,1
+Bob,The Godfather,4
+Frank,Star Wars,5
+Ivy,Inception,3
+Dave,Forrest Gump,5
+Quincy,Inception,3
+Karen,The Matrix,3
+Leo,Titanic,4
+Mia,The Godfather,5
+Nina,Star Wars,5
+Oscar,The Matrix,4
+Sarah,Star Wars,5x
+Tom,Pulp Fiction,Five
+Karen,Inception,5
+Leo,Inception,2
+Mia,Pulp Fiction,4
+Nina,The Godfather,4
+Oscar,Pulp Fiction,2
+Sarah,Inception,4
+Tom,Inception,
+Victor,The Godfather,
+Wendy,Pulp Fiction,4
+Zane,Pulp Fiction,3.5
+Uma,Titanic,5
+Victor,Matrix,x
+Wendy,The Matrix,3.5
+Xander,Forrest Gump,5
+Yara,Inception,5y
+Zane,Forrest Gump,3.5
+Uma,Star Wars,2?
+Yara,The Matrix,N/A
+Karen,Pulp Fiction,4
+Leo,Forrest Gump,5
+Mia,Forrest Gump,3
+Nina,Forrest Gump,3
+Oscar,Forrest Gump,5
+Zane,Star Wars,4
