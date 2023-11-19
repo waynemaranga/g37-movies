@@ -60,7 +60,7 @@ class MovieDataCleaner:
         self.data.to_json(filename, orient='records')
         print(f"Data written to {filename}")
 
-# Example usage
+# Instances
 data_file = 'src/db/data.txt'
 output_csv_file = 'src/data/cleaned_data.csv'
 output_json_file = 'src/data/cleaned_data.json'
@@ -68,6 +68,6 @@ output_json_file = 'src/data/cleaned_data.json'
 movie_data_cleaner = MovieDataCleaner(data_file)
 cleaned_data = movie_data_cleaner.clean_data()
 
-# Write cleaned data to CSV and JSON
-movie_data_cleaner.write_to_csv(output_csv_file)
-movie_data_cleaner.write_to_json(output_json_file)
+# Data Writers
+movie_data_cleaner.write_to_csv(output_csv_file) # to CSV 
+movie_data_cleaner.write_to_json(output_json_file) # to JSON

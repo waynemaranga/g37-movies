@@ -8,7 +8,7 @@ use termion::color;
 
 mod python_runner;
 mod recommender;
-mod summary; // Add the new module
+mod summary;
 
 fn print_ascii_art() {
     // ASCII art of your choice with added color
@@ -61,12 +61,48 @@ fn main() -> io::Result<()> {
             python_interpreter,
             script_name,
         )?;
+
+        // Add a delay of 3 seconds after script execution
+        thread::sleep(Duration::from_secs(3));
+
+        // Display description of the next step
+        match script_name {
+            "data cleaning operation" => {
+                println!("Data cleaning completed. Next step: Movie database creation.")
+            }
+            "movie database creator script" => {
+                println!("Movie database creation completed. Next step: User profile creation.")
+            }
+            "user profile creator script" => {
+                println!("User profile creation completed. Next step: User identification.")
+            }
+            "user identifier script" => {
+                println!("User identification completed. Next step: Running summary script.")
+            }
+            _ => (),
+        }
+
+        // Prompt the user to press Enter before running the next script
+        println!("\nPress Enter to continue...");
+        let mut buffer = String::new();
+        io::stdin()
+            .read_line(&mut buffer)
+            .expect("Failed to read line");
     }
 
     // Run summary script
     summary::run_summary_script()?;
+    // Add a delay of 3 seconds after summary script execution
+    thread::sleep(Duration::from_secs(3));
+
+    // Display description of the next step
+    println!("Summary script completed. Next step: Running recommender script with progress bar.");
+
     // Run recommender script with progress bar
     recommender::run_recommend_script_with_progress()?;
+
+    // Display "bye" message
+    println!("bye");
 
     Ok(())
 }
