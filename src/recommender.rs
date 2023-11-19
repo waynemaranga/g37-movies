@@ -10,33 +10,25 @@ pub fn run_recommend_script_with_progress() -> io::Result<()> {
     // Specify the path to the recommender_input.py script
     let script_path = "src/scripts/recommender_input.py";
 
-    // Set the total steps for the progress bar
-    let total_steps = 100;
-
     // Execute the Python script using the "python" command
-    for step in 0..=total_steps {
-        let status = Command::new("python").arg(script_path).status()?;
+    let status = Command::new("python").arg(script_path).status()?;
 
-        // Check the exit status
-        if status.success() {
-            println!(
-                "{}Recommender script executed successfully!",
-                color::Fg(color::Green)
-            );
-        } else {
-            println!(
-                "{}Failed to execute Recommender script. Exit code: {:?}",
-                color::Fg(color::Red),
-                status.code().unwrap_or_default()
-            );
-        }
-
-        // Print the progress bar
-        print_progress_bar(step, total_steps);
-
-        // Simulate a delay between steps
-        thread::sleep(Duration::from_millis(100));
+    // Check the exit status
+    if status.success() {
+        println!(
+            "{}Recommender script executed successfully!",
+            color::Fg(color::Green)
+        );
+    } else {
+        println!(
+            "{}Failed to execute Recommender script. Exit code: {:?}",
+            color::Fg(color::Red),
+            status.code().unwrap_or_default()
+        );
     }
+
+    // Display "bye" message
+    println!("bye");
 
     Ok(())
 }

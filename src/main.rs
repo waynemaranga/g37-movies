@@ -8,7 +8,7 @@ use termion::color;
 
 mod python_runner;
 mod recommender;
-mod summary; // Add the new module
+mod summary;
 
 fn print_ascii_art() {
     // ASCII art of your choice with added color
@@ -67,6 +67,9 @@ fn main() -> io::Result<()> {
     summary::run_summary_script()?;
     // Run recommender script with progress bar
     recommender::run_recommend_script_with_progress()?;
+
+    // Display "bye" message
+    println!("bye");
 
     Ok(())
 }
