@@ -14,7 +14,7 @@ mod recommender;
 mod summary;
 
 fn print_ascii_art() {
-    // ASCII art of your choice with added color
+    // ASCII art
     println!(
         "{}{}{}",
         termion::color::Fg(termion::color::Yellow),
@@ -36,11 +36,9 @@ fn print_ascii_art() {
         termion::color::Fg(termion::color::Reset),
     );
 
-    // Add a delay of 2 seconds
-    thread::sleep(Duration::from_secs(2));
+    thread::sleep(Duration::from_secs(2)); // add a delay of 2 seconds after printing ASCII art
 
-    // Prompt the user to press Enter to continue
-    println!("\nPress Enter to continue...");
+    println!("\nPress Enter to continue..."); // prompt the user to press Enter to continue
     let mut buffer = String::new();
     io::stdin()
         .read_line(&mut buffer)
@@ -48,10 +46,9 @@ fn print_ascii_art() {
 }
 
 fn main() -> io::Result<()> {
-    // Print ASCII art with delay and prompt before running Python scripts
-    print_ascii_art();
+    print_ascii_art(); // print ASCII art to the console with delay
 
-    // Run Python scripts
+    // run Python scripts with progress bar in the terminal
     let python_scripts = vec![
         ("src/scripts/clean.py", "data cleaning operation"),
         ("src/scripts/movies.py", "movie database creator script"),
@@ -59,22 +56,23 @@ fn main() -> io::Result<()> {
         ("src/scripts/users.py", "user identifier script"),
     ];
 
-    let current_dir = env::current_dir()?;
-    let python_interpreter = "python";
+    let current_dir = env::current_dir()?; // get the current directory
+    let python_interpreter = "python"; // specify the Python interpreter to use // TODO: make this configurable for use with virtualenvs
 
     for (script_path, script_name) in python_scripts {
-        let script_path = current_dir.join(script_path);
+        // run Python script using the python_runner module
+        let script_path = current_dir.join(script_path); // join the current directory with the script path
         python_runner::execute_python_script(
             &script_path.to_string_lossy(),
             python_interpreter,
             script_name,
         )?;
 
-        // Add a delay of 2 seconds after script execution
-        thread::sleep(Duration::from_secs(2));
+        thread::sleep(Duration::from_secs(2)); // add a delay of 2 seconds after running each script
 
-        // Display description of the next step
         match script_name {
+            // match statement to display a message after each script is run
+            // TODO: make this more DRY
             "data cleaning operation" => {
                 println!("\nThat's done, There's new files in the data folder now\nWe'll use them to create a list of users, their profiles\nand some movies.")
             }
@@ -90,28 +88,27 @@ fn main() -> io::Result<()> {
             _ => (),
         }
 
-        // Prompt the user to press Enter before running the next script
+        // prompt the user to press Enter before running the next script
         println!("\nPress Enter to continue...");
-        let mut buffer = String::new();
+        let mut buffer = String::new(); // create a new String buffer
         io::stdin()
             .read_line(&mut buffer)
-            .expect("Failed to read line");
+            .expect("Failed to read line"); // read the line from the user without error handling
     }
 
-    // Run summary script
+    // run summary script
     summary::run_summary_script()?;
-    // Add a delay of 3 seconds after summary script execution
+    // add a delay of 3 seconds after summary script execution
     thread::sleep(Duration::from_secs(3));
 
-    // Display description of the next step
+    // display description of the next step
     println!(
         "\nSummary script completed. Check this list out, because using it, we'll make some very well informed [lmao] recommendations.\n Netflix wishes it was this good. \nNext step: Running recommender...\n"
     );
 
-    // Run recommender script with progress bar
-    recommender::run_recommend_script_with_progress()?;
+    recommender::run_recommend_script_with_progress()?; // run recommender script with progress bar
 
-    // Display "bye" message
+    // display the goodbye message
     println!("Now your great taste is about to get even better.\nCheck out the repository at https://github.com/waynemaranga/Recommender-System. \nHere's twenty emojis for no particular reason: \nBye!");
 
     Ok(())
