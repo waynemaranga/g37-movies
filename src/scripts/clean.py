@@ -50,7 +50,7 @@ class MovieDataCleaner:
         it does this by calling the to_csv() method on the data.
         '''
         self.data.to_csv(filename, index=False)
-        print(f"Data written to {filename}")
+        print(f"\nData written to {filename}")
 
     def write_to_json(self, filename):
         '''
@@ -58,7 +58,7 @@ class MovieDataCleaner:
         it does this by calling the to_json() method on the data.
         '''
         self.data.to_json(filename, orient='records')
-        print(f"Data written to {filename}")
+        print(f"\nData written to {filename}")
 
 # Instances
 data_file = 'src/db/data.txt'

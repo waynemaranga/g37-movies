@@ -1,5 +1,8 @@
-// File: src/python_runner.rs
-
+#[allow(dead_code)]
+#[allow(unused_variables)]
+#[allow(dead_code)]
+#[allow(unused_imports)]
+// --------------------------------------------------------
 use std::io;
 use std::io::Write;
 use std::process::Command;
@@ -23,10 +26,12 @@ pub fn execute_python_script(
         style::Bold,
         script_name
     );
-    io::stdout().flush()?; // Ensure the message is immediately visible
+    io::stdout().flush()?; // flush method to ensure the output is printed immediately
 
-    // Simulate a loading bar
+    // simulate a loading bar. should be replaced with a real progress bar
     for _ in 0..10 {
+        // print!("#");
+
         print!("{}", color::Fg(color::Blue));
         io::stdout().flush()?;
         print!("█");
@@ -35,10 +40,11 @@ pub fn execute_python_script(
     }
 
     // Execute the Python script
-    let status = Command::new(interpreter).arg(script_path).status()?;
+    let status = Command::new(interpreter).arg(script_path).status()?; // TODO: make this configurable for use with virtualenvs
     if status.success() {
+        // print!("{}{}{}{} executed successfully!", color::Fg(color::Green), style::Bold, script_name, color::Fg(color::Reset));
         println!(
-            "{}{}{}{}{} executed successfully!",
+            "\n{}{}{}{}{} executed successfully!",
             color::Fg(color::Green),
             style::Bold,
             script_name,
@@ -46,6 +52,8 @@ pub fn execute_python_script(
             style::Reset
         );
     } else {
+        // error handling for Python script execution
+        // FIXME: TRY TO GET THE ERROR MESSAGE FROM PYTHON TERMINAL
         println!(
             "{}{}{}{}Failed to execute {}. Exit code: {:?}",
             color::Fg(color::Red),
@@ -54,7 +62,7 @@ pub fn execute_python_script(
             color::Fg(color::Reset),
             script_name,
             status.code().unwrap_or_default()
-        );
+        ); // should be replaced with a real error message
     }
-    Ok(())
+    Ok(()) //TODO: success codes should be returned along with Ok(())
 }

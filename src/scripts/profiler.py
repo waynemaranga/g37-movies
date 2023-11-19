@@ -33,7 +33,7 @@ class UserProfileGenerator:
     def save_profiles_to_json(self, filename): # pylint: disable=invalid-name
         profiles = self.generate_profiles() # Generate user profiles
         pd.DataFrame(profiles).T.to_json(filename, orient='index')
-        print(f"Profiles data written to {filename}")
+        print(f"\nProfiles data written to {filename}")
 
 
 data_file = 'src/data/cleaned_data.csv' # Path to the cleaned data

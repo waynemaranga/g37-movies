@@ -1,5 +1,8 @@
-// File: src/summary.rs
-
+#[allow(dead_code)]
+#[allow(unused_variables)]
+#[allow(dead_code)]
+#[allow(unused_imports)]
+// --------------------------------------------------------
 use std::fs;
 use std::io;
 use std::path::Path;
@@ -8,6 +11,7 @@ use termion::style;
 
 pub fn run_summary_script() -> io::Result<()> {
     println!(
+        // Print a summary runner message to the console
         "{}{}{}{}{}",
         color::Fg(color::Green),
         style::Bold,
@@ -16,17 +20,18 @@ pub fn run_summary_script() -> io::Result<()> {
         style::Reset
     );
 
-    // Execute the summary script
+    // run the summary script
     let status = std::process::Command::new("python")
         .arg("src/scripts/summary.py")
-        .status()?;
+        .status()?; // TODO: make this configurable for use with virtualenvs
 
     if status.success() {
+        // Print a success message to the console
         println!(
             "{}{}Summary script executed successfully!{}",
             color::Fg(color::Green),
             style::Bold,
-            style::Reset
+            style::Reset // check color::Reset
         );
 
         // Check if summary.txt exists before printing insights
@@ -35,6 +40,7 @@ pub fn run_summary_script() -> io::Result<()> {
             print_summary_insights()?;
         } else {
             println!(
+                // TODO: match statement for different colors
                 "{}{}Summary.txt not found. Generating insights from summary.json only.{}",
                 color::Fg(color::Yellow),
                 style::Bold,
