@@ -1,5 +1,9 @@
-// recommender.rs
-
+#[allow(dead_code)]
+#[allow(unused_variables)]
+#[allow(dead_code)]
+#[allow(unused_imports)]
+// #[allow(unused)]
+// --------------------------------------------------------
 use std::io::{self, Write};
 use std::process::Command;
 use std::thread;

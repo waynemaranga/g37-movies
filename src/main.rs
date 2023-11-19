@@ -1,5 +1,8 @@
-// main.rs
-
+#[allow(dead_code)]
+#[allow(unused_variables)]
+#[allow(dead_code)]
+#[allow(unused_imports)]
+// --------------------------------------------------------
 use std::env;
 use std::io;
 use std::thread;
@@ -16,6 +19,9 @@ fn print_ascii_art() {
         "{}{}{}",
         termion::color::Fg(termion::color::Yellow),
         r#"
+        Hey there lucky user! Welcome to the GET Movies Recommender System.
+        Don't mind the spelling error. It's intentional. I promise.
+        Here's some ASCII art to get you started.
         
          __  ____  ______   __  __               _            
         / / |___ \|____  | |  \/  |             (_)           
@@ -23,7 +29,9 @@ fn print_ascii_art() {
       | '_ \ |__ <   / /   | |\/| | / _ \\ \ / /| | / _ \/ __|
       | (_) |___) | / /    | |  | || (_) |\ V / | ||  __/\__ \
        \___/|____/ /_/     |_|  |_| \___/  \_/  |_| \___||___/
-                                                            
+
+        Nice? No? Well, I tried. Anyway, let's get started with the movies.
+        There's a file called data.txt in the db folder... Let's clean it up.                                                    
 "#,
         termion::color::Fg(termion::color::Reset),
     );
@@ -62,22 +70,22 @@ fn main() -> io::Result<()> {
             script_name,
         )?;
 
-        // Add a delay of 3 seconds after script execution
-        thread::sleep(Duration::from_secs(3));
+        // Add a delay of 2 seconds after script execution
+        thread::sleep(Duration::from_secs(2));
 
         // Display description of the next step
         match script_name {
             "data cleaning operation" => {
-                println!("Data cleaning completed. Next step: Movie database creation.")
+                println!("\nThat's done, There's new files in the data folder now\nWe'll use them to create a list of users, their profiles\nand some movies.")
             }
             "movie database creator script" => {
-                println!("Movie database creation completed. Next step: User profile creation.")
+                println!("\nMovie database creation completed. Next step: User profile creation.")
             }
             "user profile creator script" => {
-                println!("User profile creation completed. Next step: User identification.")
+                println!("\nUser profile creation completed. Next step: User identification.")
             }
             "user identifier script" => {
-                println!("User identification completed. Next step: Running summary script.")
+                println!("\nThat was simple. Now using the clean data, and the profiles, we're going to summarise the data.\n Next step: Running summary script.")
             }
             _ => (),
         }
@@ -96,13 +104,15 @@ fn main() -> io::Result<()> {
     thread::sleep(Duration::from_secs(3));
 
     // Display description of the next step
-    println!("Summary script completed. Next step: Running recommender script with progress bar.");
+    println!(
+        "\nSummary script completed. Check this list out, because using it, we'll make some very well informed [lmao] recommendations.\n Netflix wishes it was this good. \nNext step: Running recommender...\n"
+    );
 
     // Run recommender script with progress bar
     recommender::run_recommend_script_with_progress()?;
 
     // Display "bye" message
-    println!("bye");
+    println!("Now your great taste is about to get even better.\nCheck out the repository at https://github.com/waynemaranga/Recommender-System. \nHere's twenty emojis for no particular reason: \nBye!");
 
     Ok(())
 }

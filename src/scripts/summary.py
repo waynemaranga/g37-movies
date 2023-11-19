@@ -43,7 +43,7 @@ class MovieDataSummary:
         
         file_path = os.path.join(folder_path, 'summary.txt')
         with open(file_path, 'w') as text_file:
-            text_file.write("Top Watched Movies:\n")
+            text_file.write("\nTop Watched Movies:\n")
             for movie, count in summary['top_watched_movies']:
                 text_file.write(f"{movie}: {count} views\n")
 

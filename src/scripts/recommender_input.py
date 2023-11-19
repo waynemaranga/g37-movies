@@ -51,7 +51,7 @@ class SimpleMovieRecommender:
 
     def get_movie_list(self):
         # Display a numbered list of movies
-        print("Movie List:")
+        print("\nMovie List:")
         for i, movie in enumerate(self.movie_names, start=1):
             print(f"{i}. {movie}")
 
@@ -85,7 +85,7 @@ simple_movie_recommender = SimpleMovieRecommender(movies_data) # Instance of the
 user_selected_movie = simple_movie_recommender.get_movie_from_user_input() # Get the movie from user input
 recommended_movies = simple_movie_recommender.recommend_movies(user_selected_movie) 
 
-print(f"Top 5 recommended movies for '{user_selected_movie}':")
+print(f"\n\nTop 5 recommended movies for '{user_selected_movie}':")
 for movie in recommended_movies:
     print(movie)
     # print the recommended movies

@@ -1,4 +1,6 @@
 # FEATURES
+<!-- Intending to use py-pack by cargo for virtualenv TODO: check requirments -->
+<!-- TODO: try pypack, check requirements, test executable -->
 
 ## `main.rs`
 Entry point of the Rust application, responsible for executing Python scripts

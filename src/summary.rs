@@ -1,5 +1,8 @@
-// File: src/summary.rs
-
+#[allow(dead_code)]
+#[allow(unused_variables)]
+#[allow(dead_code)]
+#[allow(unused_imports)]
+// --------------------------------------------------------
 use std::fs;
 use std::io;
 use std::path::Path;
