@@ -7,7 +7,7 @@ use std::env;
 use std::io;
 use std::thread;
 use std::time::Duration;
-use termion::color;
+// use termion::color;
 
 mod python_runner;
 mod recommender;

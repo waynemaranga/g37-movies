@@ -6,8 +6,8 @@
 // --------------------------------------------------------
 use std::io::{self, Write};
 use std::process::Command;
-use std::thread;
-use std::time::Duration;
+// use std::thread;
+// use std::time::Duration;
 use termion::color;
 
 pub fn run_recommend_script_with_progress() -> io::Result<()> {
@@ -38,20 +38,22 @@ pub fn run_recommend_script_with_progress() -> io::Result<()> {
     Ok(())
 }
 
+/*
 fn print_progress_bar(progress: usize, total: usize) {
     // FIXME: redundant code, should be refactored
     let percentage = (progress * 100) / total;
     let num_hashes = (progress * 20) / total;
+*/
 
-    print!("[");
-    for _ in 0..num_hashes {
-        // progress bar with square brackets
-        print!("#");
-    }
-    for _ in num_hashes..20 {
-        print!("-");
-    }
-    print!("] {}%", percentage);
-    print!("{}", termion::cursor::Left(23)); // Move the cursor back to overwrite the progress bar
-    io::stdout().flush().unwrap();
-}
+//     print!("[");
+//     for _ in 0..num_hashes {
+//         // progress bar with square brackets
+//         print!("#");
+//     }
+//     for _ in num_hashes..20 {
+//         print!("-");
+//     }
+//     print!("] {}%", percentage);
+//     print!("{}", termion::cursor::Left(23)); // Move the cursor back to overwrite the progress bar
+//     io::stdout().flush().unwrap();
+// }
