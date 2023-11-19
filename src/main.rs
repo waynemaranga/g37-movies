@@ -109,7 +109,7 @@ fn main() -> io::Result<()> {
     recommender::run_recommend_script_with_progress()?; // run recommender script with progress bar
 
     // display the goodbye message
-    println!("Now your great taste is about to get even better.\nCheck out the repository at https://github.com/waynemaranga/Recommender-System. \nHere's twenty emojis for no particular reason:\n\u{1F60A}\u{1F308}\u{1F43E}\u{1F338}\u{1F36D}\u{1F31F}\u{1F431}\u{1F340}\u{1F984}\u{1F369}\u{1F303}\u{1F43C}\u{1F308}\u{1F308}\u{1F428}\u{1F337}\u{1F353}\u{1F319}\u{1F31E}\u{1F308} \nBye!");
+    println!("Now your great taste is about to get even better.\nCheck out the repository at https://github.com/waynemaranga/g37-movies. \nHere's twenty emojis for no particular reason:\n\u{1F60A}\u{1F308}\u{1F43E}\u{1F338}\u{1F36D}\u{1F31F}\u{1F431}\u{1F340}\u{1F984}\u{1F369}\u{1F303}\u{1F43C}\u{1F308}\u{1F308}\u{1F428}\u{1F337}\u{1F353}\u{1F319}\u{1F31E}\u{1F308} \nBye!");
 
     Ok(())
 }
