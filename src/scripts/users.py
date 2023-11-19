@@ -12,7 +12,7 @@ class UserExtractor:
         unique_users = self.extract_users()
         users_dict = {'Users': unique_users}
         pd.DataFrame(users_dict).to_json(filename, orient='records')
-        print(f"Users data written to {filename}")
+        print(f"\nUsers data written to {filename}")
 
 # Example usage
 data_file = 'src/data/cleaned_data.csv'

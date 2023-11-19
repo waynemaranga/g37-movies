@@ -24,7 +24,7 @@ class MovieExtractor:
         unique_movies = self.extract_movies()
         movies_dict = {'Movies': unique_movies}
         pd.DataFrame(movies_dict).to_json(filename, orient='records')
-        print(f"Movies data written to {filename}")
+        print(f"\nMovies data written to {filename}")
 
 
 data_file = 'src/data/cleaned_data.csv' # Path to the cleaned data

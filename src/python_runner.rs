@@ -44,7 +44,7 @@ pub fn execute_python_script(
     if status.success() {
         // print!("{}{}{}{} executed successfully!", color::Fg(color::Green), style::Bold, script_name, color::Fg(color::Reset));
         println!(
-            "{}{}{}{}{} executed successfully!",
+            "\n{}{}{}{}{} executed successfully!",
             color::Fg(color::Green),
             style::Bold,
             script_name,
